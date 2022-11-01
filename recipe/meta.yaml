@@ -15,7 +15,7 @@ build:
     - CMAKE_GENERATOR=Ninja
     - PARALLELIZATION_DEVICE=OMP
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   build:
