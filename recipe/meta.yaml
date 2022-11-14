@@ -14,7 +14,7 @@ build:
   script_env:
     - CMAKE_GENERATOR=Ninja
     - POLYHEDRAL_GRAVITY_PARALLELIZATION=OMP
-    - CMAKE_ARGS=_LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
+    - CMAKE_ARGS=-D_LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
