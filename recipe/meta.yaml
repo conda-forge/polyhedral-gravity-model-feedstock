@@ -14,7 +14,7 @@ build:
   script_env:
     - CMAKE_GENERATOR=Ninja
     - POLYHEDRAL_GRAVITY_PARALLELIZATION=OMP
-    - CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
+    - CMAKE_ARGS='-DCMAKE_CXX_FLAGS="-D_LIBCPP_DISABLE_AVAILABILITY"'  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
