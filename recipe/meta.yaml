@@ -15,7 +15,7 @@ build:
     - CMAKE_GENERATOR=Ninja
     - PARALLELIZATION_DEVICE=OMP
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -28,7 +28,7 @@ requirements:
   host:
     - python
     - spdlog
-    - xsimd
+    - xsimd <=8.1.0
     - pybind11
     - thrust
     - pip
