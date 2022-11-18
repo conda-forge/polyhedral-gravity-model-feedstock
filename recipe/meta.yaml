@@ -28,7 +28,7 @@ requirements:
   host:
     - python
     - spdlog
-    - xsimd
+    - xsimd <=8.1.0
     - pybind11
     - thrust
     - pip
