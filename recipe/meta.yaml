@@ -1,6 +1,6 @@
 {% set name = "polyhedral-gravity-model" %}
 {% set org = "esa" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +8,12 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 50770e321b7cace2fcc9b511835c03bc51206285b2c9977d46ecd74220b3700e
+  sha256: a20aaa2ff2f219caa2f8eaa07d97dd6d2551653f8411b352acad17f70115a17e
 
 build:
   script_env:
     - CMAKE_GENERATOR=Ninja
     - POLYHEDRAL_GRAVITY_PARALLELIZATION=OMP
-    - CMAKE_ARGS=-D_LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
