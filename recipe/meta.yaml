@@ -1,6 +1,6 @@
 {% set name = "polyhedral-gravity-model" %}
 {% set org = "esa" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,13 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 024b5bfb9453d81d5917ee298c508f61ef847332a3418a3a94a8866f9a19dcc3
+  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
 
 build:
   script_env:
     - CMAKE_GENERATOR=Ninja
     - POLYHEDRAL_GRAVITY_PARALLELIZATION=OMP
+    - BUILD_SHARED_LIBS=ON
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -28,9 +29,9 @@ requirements:
   host:
     - python
     - spdlog
-    - xsimd <=8.1.0
-    - pybind11
+    - xsimd
     - thrust
+    - pybind11
     - pip
   run:
     - python
