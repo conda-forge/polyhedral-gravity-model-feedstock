@@ -8,13 +8,14 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eeb206a0fa1fb8e24269dcc40f09a89244e8ba53d00adcab5c7d894a16a80e23
+  sha256: eac74af270f9b0698e215c8d0dccf25bfb601160a1f7d8f8d6b7e1d2355e7982
 
 build:
   script_env:
     - CMAKE_GENERATOR=Ninja
     - POLYHEDRAL_GRAVITY_PARALLELIZATION=OMP
     - BUILD_SHARED_LIBS=ON
+    - _LIBCPP_DISABLE_AVAILABILITY
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
