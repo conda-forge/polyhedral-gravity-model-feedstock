@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eac74af270f9b0698e215c8d0dccf25bfb601160a1f7d8f8d6b7e1d2355e7982
+  sha256: ff72a74c4a9382358b8ad0653eb9cbc1e692cc68e513e1fb7f43fe5abf9e775a
 
 build:
   script_env:
     - CMAKE_GENERATOR=Ninja
     - POLYHEDRAL_GRAVITY_PARALLELIZATION=OMP
     - BUILD_SHARED_LIBS=ON
-    - _LIBCPP_DISABLE_AVAILABILITY=1
+    - _LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -30,7 +30,7 @@ requirements:
   host:
     - python
     - spdlog
-    - xsimd
+    - xsimd >=11.0.0
     - thrust
     - pybind11
     - pip
