@@ -1,11 +1,11 @@
-About polyhedral-gravity-model
-==============================
+About polyhedral-gravity-model-feedstock
+========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/polyhedral-gravity-model-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/esa/polyhedral-gravity-model
 
 Package license: GPL-3.0-only AND AGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/polyhedral-gravity-model-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simple and fast evaluation of the polyhedral gravity model for a constant density polyhedron
 
