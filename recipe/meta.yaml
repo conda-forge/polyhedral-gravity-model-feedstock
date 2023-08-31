@@ -1,6 +1,6 @@
 {% set name = "polyhedral-gravity-model" %}
 {% set org = "esa" %}
-{% set version = "2.0.3" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 759a0d791aae1fd19d5a1a7b842635677ea82cc738a4ccbb05dfe2af41cad9cf
+  sha256: fc6c5ed8fba6df5c8f94d5423b6d88731107ea625810eb731ab096f5a6e8a14e
 
 build:
   script_env:
