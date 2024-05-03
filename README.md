@@ -7,13 +7,13 @@ Home: https://github.com/esa/polyhedral-gravity-model
 
 Package license: GPL-3.0-only AND AGPL-3.0-or-later
 
-Summary: Simple and fast evaluation of the polyhedral gravity model for a constant density polyhedron
+Summary: Package to compute full gravity tensor of a given constant density polyhedron for arbitrary points according to the geodetic convention
 
 Development: https://github.com/esa/polyhedral-gravity-model
 
-Documentation: https://polyhedral-gravity-model-cpp.readthedocs.io/en/latest
+Documentation: https://esa.github.io/polyhedral-gravity-model/
 
-The package polyhedral_gravity provides a simple to use interface for the evaluation of the full gravity tensor of a constant density polyhedron at given computation points. It is based on a fast, parallelized backbone in C++ capable of evaluating the gravity at thousands of computation points in the fraction of a second.
+The package polyhedral_gravity provides a simple-to-use interface for evaluating the full gravity tensor of a constant-density polyhedron at arbitrary given computation points according to the geodetic convention. The computation is based on the line integral approach by Tsoulis et al., which transforms the triple integral into a summation. The implementation relies on a fast, parallelized backbone in C++ capable of evaluating the gravity at thousands of computation points in a fraction of a second. The package includes the functionality to read a polyhedral mesh from files and transform it to fulfill the preconditions of Tsoulis' formulation.
 
 
 Current build status
