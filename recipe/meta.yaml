@@ -1,6 +1,6 @@
 {% set name = "polyhedral-gravity-model" %}
 {% set org = "esa" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d802e23fd208a806a2a7415df66e7e283c295da0248b455976e8ea72c871d08f
+  sha256: d411087c45b431e10ed64f2bc9a6c932e988584f299f2a5b67737e3776e36ef2
 
 build:
   script_env:
@@ -17,7 +17,7 @@ build:
     - BUILD_SHARED_LIBS=ON
     - _LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -50,7 +50,8 @@ about:
   home: https://github.com/esa/polyhedral-gravity-model
   summary: Package to compute full gravity tensor of a given constant density polyhedron for arbitrary points according to the geodetic convention
   description: >
-    The package polyhedral_gravity provides a simple-to-use interface for evaluating the full gravity tensor of a constant-density polyhedron at arbitrary given computation points according to the geodetic convention. The computation is based on the line integral approach by Tsoulis et al., which transforms the triple integral into a summation. The implementation relies on a fast, parallelized backbone in C++ capable of evaluating the gravity at thousands of computation points in a fraction of a second. The package includes the functionality to read a polyhedral mesh from files and transform it to fulfill the preconditions of Tsoulis' formulation.
+    The package polyhedral_gravity provides a simple-to-use interface for evaluating the full gravity tensor of a constant-density polyhedron at arbitrary given computation points according to the geodetic convention. The computation is based on the line integral approach by Tsoulis et al., which transforms the triple integral
+    into a summation. The implementation relies on a fast, parallelized backbone in C++ capable of evaluating the gravity at thousands of computation points in a fraction of a second. The package includes the functionality to read a polyhedral mesh from files and transform it to fulfill the preconditions of Tsoulis' formulation.
   license: GPL-3.0-only AND AGPL-3.0-or-later
   license_family: GPL3
   license_file:
