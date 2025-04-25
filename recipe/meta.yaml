@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 41bb33eb77fcedfab8e6bc1bbb1f4b8a8ea8dc59dbc8d763c00ad575f0c40f2f
+  sha256: 9d9ed476052be2d0ad663f99c0ac7678b404396fb705e60c0414d59a20bb09d6
 
 build:
   script_env:
