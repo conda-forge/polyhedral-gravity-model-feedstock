@@ -25,9 +25,6 @@ pin_run_as_build:
 python:
 - 3.11.* *_cpython
 spdlog:
-- '1.15'
+- '1.16'
 target_platform:
 - osx-64
-zip_keys:
-- - python
-  - channel_sources
