@@ -17,7 +17,7 @@ build:
     - BUILD_SHARED_LIBS=ON
     - _LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
