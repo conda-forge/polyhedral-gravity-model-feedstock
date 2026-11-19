@@ -1,6 +1,6 @@
 {% set name = "polyhedral-gravity-model" %}
 {% set org = "esa" %}
-{% set version = "3.3.1" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 37e45c03472970c83a5793e49e1ee77e791f7c16e17c9f6f7c70b1dcdfac45be
+  sha256: 9e81c638545b1142fe16583ecb11de3ccbdc6eac5d2ab1ff4845ae3c18939f87
 
 build:
   script_env:
@@ -17,7 +17,7 @@ build:
     - BUILD_SHARED_LIBS=ON
     - _LIBCPP_DISABLE_AVAILABILITY=1  # [osx]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   build:
